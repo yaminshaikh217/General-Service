@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* General Style  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%; /* 1rem = 10 px*/
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+button:is(:hover, :active, :focus, button) {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* Navbar style start */
+
+/* Navbar style ends */
