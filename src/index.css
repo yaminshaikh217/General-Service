@@ -16,7 +16,11 @@ html {
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
 }
+
 button:is(:hover, :active, :focus, button) {
   cursor: pointer;
   border: 0;
@@ -25,7 +29,74 @@ button:is(:hover, :active, :focus, button) {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 
 /* Navbar style start */
+.navbar {
+  background: #030921;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.navLinks li {
+  position: relative;
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+}
+.navLinks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background: #fff;
+  bottom: -3px;
+  transition: all 0.2s ease-in;
+}
+.navLinks li:hover:before {
+  width: 100%;
+}
+.logo {
+  font-size: 2rem;
+  color: #fff;
+}
+.hamburgerMenu {
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* responsive Navbar  */
+@media (max-width: 768px) {
+  .hamburgerMenu {
+    display: block;
+    color: red;
+  }
+  .navLinks {
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    background: #030921;
+    flex-direction: column;
+    height: 100vh;
+    transform: translateX(-101%);
+    transition: all 0.3s ease-out;
+  }
+  .navLinks.active {
+    transform: translateX(0%);
+  }
+}
 
 /* Navbar style ends */
