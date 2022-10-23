@@ -6,6 +6,7 @@ import Home from './Components/Home'
 import Navbar from './Components/Navbar'
 import ScrollTop from './Components/ScrollTop'
 import Services from './Components/Services'
+import Testimonial from './Components/Testimonial'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <About/>
       <Services/>
       <Expert/>
+      <Testimonial/>
       <Footer/>
       <ScrollTop/>
     </>

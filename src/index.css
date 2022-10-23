@@ -357,7 +357,7 @@ footer {
   gap: 8rem;
   margin-top: 5rem;
 }
- .cards {
+.cards {
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
@@ -423,12 +423,13 @@ footer {
 }
 .clippyCard {
   background: #fff;
-  padding: 1.5rem;
+  padding: 3.5rem 1.5rem;
   transform: skewX(6deg) rotate(6deg);
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -10rem;
   left: 0;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .clippyCard > * {
   transform: skewX(-6deg) rotate(-6deg);
@@ -439,4 +440,84 @@ footer {
   width: 100%;
   height: 100%;
 }
+.cards:hover .clippyCard {
+  bottom:-2rem;
+  background: var(--primary-font-color);
+}
+.cards .clippyCard .heading {
+  margin: 1rem 0;
+}
+.cards:hover .clippyCard .heading,
+.cards:hover .clippyCard .description {
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: #fff;
+}
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  padding: 1rem;
+}
+.socialIcons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 1px;
+  background: #fff;
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+}
+.socialIcons li {
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+}
 /* Expert styles end */
+/* Testimonial styles start  */
+.testimonial {
+  min-height: 90vh;
+  background: #f7fcff;
+  padding: 3rem 0;
+}
+.testimonialSliders {
+  padding: 4rem;
+  border: 2px solid #dddddd;
+  transition: all .2s ease-in;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.testimonialSliders i {
+  font-size: 5rem;
+  color: #687c94;
+}
+.testimonialSliders .feedback {
+  margin: 0;
+  color: #687c94;
+  font-weight:700;
+  margin: 1.5rem 0;
+  font-size: 1.6rem;
+}
+.testimonialSliders:hover {
+  border: 2px solid var(--primary-font-color);
+}
+.testimonialSliders:hover i {
+  transition: all .2s ease-in;
+  color: var(--primary-font-color);
+}
+.testimonialSliders .clientImage {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+}
+.testimonialSliders .clientImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+  /* Testimonial styles end */
