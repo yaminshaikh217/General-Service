@@ -346,7 +346,8 @@ footer {
 /* sroll Top styles end */
 
 /* Services styles starts */
-.services {
+.services,
+.upcomingServices {
   min-height: 100vh;
   background: #f7fcff;
   padding: 4rem 0;
@@ -441,7 +442,7 @@ footer {
   height: 100%;
 }
 .cards:hover .clippyCard {
-  bottom:-2rem;
+  bottom: -2rem;
   background: var(--primary-font-color);
 }
 .cards .clippyCard .heading {
@@ -461,15 +462,24 @@ footer {
   position: relative;
   padding: 1rem;
 }
-.socialIcons::before {
+.borderBottom {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.socialIcons::before , .borderBottom::before{
   content: "";
   position: absolute;
   top: 0;
   left: 0%;
   height: 1px;
-  background: #fff;
+  background: #dddddd;
   width: calc(100% - 2rem);
   margin-inline: auto;
+}
+.borderBottom::before {
+  top: unset;
+  bottom: 0;
 }
 .socialIcons li {
   color: #fff;
@@ -479,14 +489,13 @@ footer {
 /* Expert styles end */
 /* Testimonial styles start  */
 .testimonial {
-  min-height: 90vh;
   background: #f7fcff;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 .testimonialSliders {
   padding: 4rem;
   border: 2px solid #dddddd;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   border-radius: 1rem;
   cursor: pointer;
   margin-right: 1rem;
@@ -498,7 +507,7 @@ footer {
 .testimonialSliders .feedback {
   margin: 0;
   color: #687c94;
-  font-weight:700;
+  font-weight: 700;
   margin: 1.5rem 0;
   font-size: 1.6rem;
 }
@@ -506,7 +515,7 @@ footer {
   border: 2px solid var(--primary-font-color);
 }
 .testimonialSliders:hover i {
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   color: var(--primary-font-color);
 }
 .testimonialSliders .clientImage {
@@ -520,4 +529,74 @@ footer {
   border-radius: 50%;
   object-fit: cover;
 }
-  /* Testimonial styles end */
+/* Testimonial styles end */
+/* upcomingServices start  */
+.upcomingServices {
+  background: #fff;
+}
+.upcomingServices .content {
+  background: rgba(12, 90, 219, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.upcomingServices .cards .heading {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  font-size: 2rem;
+}
+/* upcomingServices ends  */
+
+/* contact us start  */
+.contact {
+  padding: 3rem 0;
+  /* min-height: 100vh; */
+  background-image: url(./assets/map.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  isolation: isolate;
+}
+.contact::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: -1;
+}
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .form {
+  border: 1px solid #dddddd;
+  background: var(--primary-font-color);
+  padding: 3rem;
+  border-radius: 0.6rem;
+  box-shadow:  0px 2px 50px rgba(12, 90, 219, 0.4);
+}
+.form h3 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #fff;
+}
+.form .info {
+  color: #f7fcff;
+  font-size: 1.5rem;
+}
+/* .form h2 {
+  font-size: 2.5rem;
+  color: var(--primary-font-color);
+} */
+/* contact us ends */
