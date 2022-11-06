@@ -5,9 +5,11 @@ import Comingsoon from "./Comingsoon";
 
 const Navbar = () => {
   const [active, setactive] = useState(false);
+  const [coming, setcoming] = useState(false);
   const handleActive = () => {
     setactive(!active);
   };
+  const handleComingSoon = () => {setcoming(!coming)}
 
   return (
     <>
@@ -22,8 +24,8 @@ const Navbar = () => {
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
             <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-google-play"></i>
-            <i className="fa-brands fa-apple"></i>
+            <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i>
+            <i className="fa-brands fa-apple" onClick={handleComingSoon}></i>
           </div>
         </div>
       </div>
@@ -62,7 +64,7 @@ const Navbar = () => {
           </div>
         </header>
       </nav>
-      <Comingsoon/>
+      <Comingsoon show={coming} handleComingClick={handleComingSoon} />
     </>
   );
 };

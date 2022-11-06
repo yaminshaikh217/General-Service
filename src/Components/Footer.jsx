@@ -1,6 +1,11 @@
 import Logo from "../assets/logo.svg";
+import { useState } from "react";
+import Comingsoon from "./Comingsoon";
 
 const Footer = () => {
+  const [coming, setcoming] = useState(false);
+  const handleComingSoon = () => { setcoming(!coming) }
+
   return (
     <>
       <footer>
@@ -13,14 +18,15 @@ const Footer = () => {
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
             <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-google-play"></i>
-            <i className="fa-brands fa-apple"></i>
+            <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i>
+            <i className="fa-brands fa-apple" onClick={handleComingSoon}></i>
           </div>
           <div>
             <p>Copyright 2022. All Rights Reserved</p>
           </div>
         </div>
       </footer>
+      <Comingsoon show={coming} handleComingClick={handleComingSoon} />
     </>
   );
 };
