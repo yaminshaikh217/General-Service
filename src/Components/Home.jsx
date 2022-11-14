@@ -21,7 +21,7 @@ const Home = () => {
             <p className="revealText">Trustworthy, Reliable, Professional</p>
             <div className="btnGroup revealText">
               <button className="primaryBtn" onClick={showContact}>
-                Get in touch
+                Get in touch <i className="fa-solid fa-arrow-right-long ms-2"></i>
               </button>
             </div>
           </div>

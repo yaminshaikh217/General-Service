@@ -14,6 +14,9 @@ const Footer = () => {
             <img src={Logo} alt="Logo" />
             <h2>FAIR DEAL</h2>
           </div>
+          <div>
+            <p>Copyright 2022. All Rights Reserved</p>
+          </div>
           <div className="icons">
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
@@ -21,9 +24,7 @@ const Footer = () => {
             <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i>
             <i className="fa-brands fa-apple" onClick={handleComingSoon}></i>
           </div>
-          <div>
-            <p>Copyright 2022. All Rights Reserved</p>
-          </div>
+
         </div>
       </footer>
       <Comingsoon show={coming} handleComingClick={handleComingSoon} />

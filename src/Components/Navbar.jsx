@@ -24,8 +24,9 @@ const Navbar = () => {
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
             <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i>
-            <i className="fa-brands fa-apple" onClick={handleComingSoon}></i>
+            <button className="getApp" onClick={handleComingSoon}>Get App</button>
+            {/* <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i> */}
+            {/* <i className="fa-brands fa-apple" onClick={handleComingSoon}></i> */}
           </div>
         </div>
       </div>
