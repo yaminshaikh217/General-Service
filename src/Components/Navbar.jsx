@@ -9,24 +9,36 @@ const Navbar = () => {
   const handleActive = () => {
     setactive(!active);
   };
-  const handleComingSoon = () => {setcoming(!coming)}
+  const handleComingSoon = () => {
+    setcoming(!coming);
+  };
 
   return (
     <>
       <div className="headline">
         <div className="container">
           <div className="d-flex">
-            <p><a href="tel:+91 6359001001">Call Us : +91 6359001001</a></p>
-            <p><a >or</a></p>
-            <p><a href="mailto:name@gmail.com">Mail Us : name@gmail.com</a></p>
+            <p>
+              <a href="tel:+91 6359001001">Call Us : +91 6359001001</a>
+            </p>
+            <p>
+              <a>or</a>
+            </p>
+            <p>
+              <a href="mailto:name@gmail.com">Mail Us : name@gmail.com</a>
+            </p>
           </div>
           <div className="icons">
-            <i className="fa-brands fa-facebook"></i>
+            <a href="https://www.facebook.com/Fairdeal-Company-107433102185215/" target="_blank">
+              <i className="fa-brands fa-facebook"></i>
+            </a>
             <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <button className="getApp" onClick={handleComingSoon}>Get App</button>
+            <a href="https://instagram.com/fairdeal_company?igshid=YmMyMTA2M2Y=" target="_blank">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
             {/* <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i> */}
             {/* <i className="fa-brands fa-apple" onClick={handleComingSoon}></i> */}
+            <button className="getApp" onClick={handleComingSoon}>Get App</button>
           </div>
         </div>
       </div>

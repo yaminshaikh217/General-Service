@@ -9,7 +9,15 @@ const DetailPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
-
+  // let t1 =localStorage.getItem("t1");
+  // let t2 = localStorage.getItem("t2");
+  // let t3 =localStorage.getItem("t3");
+  // let d1 = localStorage.getItem("d1");
+  // let d2 =localStorage.getItem("d2");
+  // let d3 = localStorage.getItem("d3");
+  // let img =localStorage.getItem("img");
+  // let img1 =localStorage.getItem("img1");
+  // let img2 =localStorage.getItem("img2");
   return (
     <>
       <Navbar />
@@ -22,23 +30,17 @@ const DetailPage = () => {
               </div>
             </div>
             <div className="lists">
-              <h2>Professional Team.</h2>
+              <h2>{detail.t1}.</h2>
               <ul>
-                <li>We do an impeccable job with your tasks and can guarantee you that we are the company you are looking for.</li>
-                <li>All your work will be done by professionals, who will do a professional job.</li>
-                <li>All your work will be done in time.</li>
-                <li>We provide complete customer satisfaction through our prompt and reliable services.</li>
+              <li>{detail.d1}</li>
               </ul>
             </div>
           </div>
           <div className="detailEvenCols">
             <div className="lists">
-              <h2>Quality Work.</h2>
+            <h2>{detail.t2}.</h2>
               <ul>
-                <li>Quality work for the fair price</li>
-                <li>Treat people right</li>
-                <li>Will clearly explain the services when asked</li>
-                <li>We makes sure your house is safe and secure</li>
+              <li>{detail.d2}</li>
               </ul>
             </div>
             <div>
@@ -54,12 +56,9 @@ const DetailPage = () => {
               </div>
             </div>
             <div className="lists">
-              <h2>Save Time and Money.</h2>
+            <h2>{detail.t3}.</h2>
               <ul>
-                <li>Free Home Estimates, No Hidden Fees</li>
-                <li>We are Bonded and Licensed Contractors</li>
-                <li>24/7 Emergency Service Available</li>
-                <li>All Work is Guaranteed</li>
+                <li>{detail.d3}</li>
               </ul>
             </div>
           </div>

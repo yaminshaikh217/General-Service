@@ -21,7 +21,7 @@ const ScrollTop = () => {
       >
         <i className="fa-solid fa-chevron-up"></i>
       </div>
-      <a href="https://wa.me/6359001001" target='_blank'>
+      <a href="https://wa.me/+916359001001" target='_blank'>
         <div className={`scrollTop whatsapp ${show ? "active" : ""}`}>
           <i className="fa-brands fa-whatsapp"></i>
         </div>

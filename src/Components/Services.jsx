@@ -4,10 +4,10 @@ import ac1 from "../assets/ac1.png";
 import plumber from "../assets/plumber.png";
 import plumber1 from "../assets/plumber1.png";
 import plumber2 from "../assets/plumber2.png";
-import cleaning from "../assets/cleaning.png";
+import cleaning from "../assets/cleaning3.png";
 import cleaning1 from "../assets/cleaning1.png";
 import cleaning2 from "../assets/cleaning2.png";
-import electrician from "../assets/electrician.png";
+import electrician from "../assets/electrician3.png";
 import electrician1 from "../assets/electrician1.png";
 import electrician2 from "../assets/electrician2.png";
 import ro from "../assets/ro.png";
@@ -78,7 +78,7 @@ const Services = () => {
           <div className="cardContainer">
             {serviceDetail.map((curr, idx) => {
               return (
-                <Link to="/details" state={serviceDetail[idx]} key={idx}>
+                <Link to="/electrician" key={idx}>
                   <div className="cards" key={idx}>
                     <div className="img">
                       <img src={curr.img} alt={curr.title} />

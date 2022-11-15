@@ -1,10 +1,14 @@
 import Logo from "../assets/logo.svg";
 import { useState } from "react";
 import Comingsoon from "./Comingsoon";
+import play from "../assets/googleplay.png";
+import apple from "../assets/appstore.png";
 
 const Footer = () => {
   const [coming, setcoming] = useState(false);
-  const handleComingSoon = () => { setcoming(!coming) }
+  const handleComingSoon = () => {
+    setcoming(!coming);
+  };
 
   return (
     <>
@@ -17,14 +21,31 @@ const Footer = () => {
           <div>
             <p>Copyright 2022. All Rights Reserved</p>
           </div>
-          <div className="icons">
-            <i className="fa-brands fa-facebook"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-google-play" onClick={handleComingSoon}></i>
-            <i className="fa-brands fa-apple" onClick={handleComingSoon}></i>
+          <div className="icons d-flex-jcc-alc">
+            <a
+              href="https://www.facebook.com/Fairdeal-Company-107433102185215/"
+              target="_blank"
+            >
+              <i className="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#"><i className="fa-brands fa-twitter"></i></a>
+            <a
+              href="https://instagram.com/fairdeal_company?igshid=YmMyMTA2M2Y="
+              target="_blank"
+            >
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <div>
+              <img src={play} alt="googleplaystore" />
+            </div>
+            <div>
+              <img src={apple} alt="googleplaystore" />
+            </div>
+            {/* <i
+              className="fa-brands fa-google-play"
+              onClick={handleComingSoon}></i> */}
+            {/* <i className="fa-brands fa-apple" onClick={handleComingSoon}></i> */}
           </div>
-
         </div>
       </footer>
       <Comingsoon show={coming} handleComingClick={handleComingSoon} />

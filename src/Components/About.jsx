@@ -25,6 +25,13 @@ const About = () => {
                 and boast the most modern tools and equipment.You can rest easy
                 knowing that our technicians are certified by the city.
               </p>
+              <p>
+                Our skilled technicians always arrive on time and ready to serve
+                you.We respond to all of your  requests promptly, with a
+                friendly and courteous attitude.We have our own vehicle fleet
+                and boast the most modern tools and equipment.You can rest easy
+                knowing that our technicians are certified by the city.
+              </p>
               {/* <div className="evenCols mt-5">
                 <div>
                   <p className="num">88+</p>

@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   /* 1rem = 10 px*/
+  height: 100%;
 }
 
 :root {
@@ -70,7 +71,11 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
-
+.d-flex-jcc-alc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Navbar style start */
 .navbar {
   background: rgba(3, 9, 33, 1);
@@ -197,7 +202,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: #030921;
     flex-direction: column;
     height: 100vh;
-    transform: translateX(-101%);
+    transform: translateX(101%);
     transition: all 0.3s ease-out;
   }
 
@@ -327,7 +332,14 @@ footer {
   color: #0e1454;
   margin-right: 2rem;
 }
-
+.icons div:has(img) {
+  width: 24%;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.icons a {
+  display: contents;
+}
 @media (max-width: 768px) {
   .footer {
     font-size: 1.5rem;
@@ -461,7 +473,7 @@ footer {
   font-size: 1.8rem;
   cursor: pointer;
   opacity: 0;
-  box-shadow: rgba(28, 28, 28, 0.5) 0px 5px 15px;
+  box-shadow: rgba(28, 28, 28, 0.5) 0px 5px 7px;
   transition: all 0.3s linear;
 }
 
@@ -471,7 +483,7 @@ footer {
   /* left: 3rem; */
   bottom: 10rem;
   width: 8rem;
-  right: 2rem;
+  right: 1rem;
   border-radius: 50%;
   font-size: 3.5rem;
 }
@@ -516,6 +528,7 @@ footer {
   height: 25rem;
   overflow: hidden;
   border-radius: 0.5rem;
+  pointer-events: none;
 }
 
 .cards .img img {
@@ -736,17 +749,38 @@ footer {
   transition: all 0.2s ease-in;
   color: var(--primary-font-color);
 }
+.testimonialSliders:hover .stars i {
+  transition: all 0.2s ease-in;
+  color: #ffcd3c;
+}
 
 .testimonialSliders .clientImage {
   width: 10rem;
   aspect-ratio: 1/1;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  background: var(--primary-font-color);
+  border-radius: 50%;
+  color: #030921;
 }
 
 .testimonialSliders .client {
   font-size: 2rem;
 }
-
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.stars i {
+  color: #ffcd3c;
+  font-size: 2rem;
+}
 .testimonialSliders .clientImage img {
   width: 100%;
   height: 100%;
@@ -784,7 +818,11 @@ footer {
   height: inherit;
   border-radius: inherit;
 }
-
+.slick-dots li,
+.slick-dots li button {
+  width: 16px;
+  height: 16px;
+}
 @media (max-width: 768px) {
   .testimonialSliders {
     padding: 3rem 2rem;
@@ -794,8 +832,8 @@ footer {
 
   .slick-dots li,
   .slick-dots li button {
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -978,6 +1016,7 @@ footer {
   padding: 1.3rem 2rem;
   border-radius: 100vmax;
   font-size: 1.8rem;
+  color: #030921;
   font-weight: 500;
   border: 1px solid transparent;
   transition: all 0.3s ease-out;
@@ -1022,10 +1061,27 @@ footer {
   font-weight: 500;
   margin-bottom: 2rem;
   color: var(--primary-font-color);
+  position: relative;
+}
+
+.detail .lists h2::before {
+  content: "01";
+  color: hsla(0, 0%, 16%, 0.12);
+  font-size: 10rem;
+  position: absolute;
+  top: -6rem;
+  left: -7rem;
+}
+
+.detail .parent .detailEvenCols:nth-child(2) .lists h2::before {
+  content: "02";
+}
+.detail .parent .detailEvenCols:nth-child(3) .lists h2::before {
+  content: "03";
 }
 
 .detail .img img {
-  width: 100%;
+  width: 85%;
   height: 100%;
   object-fit: cover;
   border-radius: 5rem 5rem 0 5rem;
@@ -1039,7 +1095,7 @@ footer {
   position: absolute;
   content: "";
   bottom: 48%;
-  background: rgba(234, 249, 255, 0.7);
+  background: rgba(234, 249, 255, 0.5);
   width: 30vw;
   aspect-ratio: 1/1;
   left: -30%;
@@ -1055,7 +1111,7 @@ footer {
 }
 
 .detail .lists ul li::marker {
-  content: "🔥";
+  content: "◾";
   font-size: inherit;
 }
 
@@ -1064,7 +1120,7 @@ footer {
 .comingsoon {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1083,51 +1139,63 @@ footer {
   color: #fff;
   font-size: 4rem;
 }
+
 #comingSVG path {
   animation: comingSoon 2s linear forwards, fillit 0.5s linear forwards 2.5s;
 }
+
 @keyframes fillit {
   to {
     stroke-opacity: 0;
     fill: var(--primary-font-color);
   }
 }
+
 #comingSVG .p1 {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
 }
+
 #comingSVG .p2 {
   stroke-dasharray: 314;
   stroke-dashoffset: 314;
 }
+
 #comingSVG .p3 {
   stroke-dasharray: 419;
   stroke-dashoffset: 419;
 }
+
 #comingSVG .p4 {
   stroke-dasharray: 126;
   stroke-dashoffset: 126;
 }
+
 #comingSVG .p5 {
   stroke-dasharray: 335;
   stroke-dashoffset: 335;
 }
+
 #comingSVG .p6 {
   stroke-dasharray: 353;
   stroke-dashoffset: 353;
 }
+
 #comingSVG .p7 {
   stroke-dasharray: 274;
   stroke-dashoffset: 274;
 }
+
 #comingSVG .p8 {
   stroke-dasharray: 314;
   stroke-dashoffset: 314;
 }
+
 #comingSVG .p9 {
   stroke-dasharray: 314;
   stroke-dashoffset: 314;
 }
+
 #comingSVG .p10 {
   stroke-dasharray: 336;
   stroke-dashoffset: 336;
@@ -1142,6 +1210,7 @@ footer {
     stroke-dashoffset: 0;
   }
 }
+
 .comingsoon .fa-xmark {
   position: fixed;
   background: #fff;
@@ -1158,6 +1227,7 @@ footer {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 .comingsoon .fa-xmark:hover {
   transform: rotate(90deg);
 }
@@ -1170,6 +1240,228 @@ footer {
   padding: 0.7rem 1.5rem;
 }
 /* coming soon end */
+
+/* New services design start  */
+.heroElec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.heroElec > div {
+  padding: 4rem;
+}
+.heroElec h2 {
+  color: var(--primary-font-color);
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+.heroElec p {
+  font-size: 1.8rem;
+  color: #030921;
+}
+.horizonLine {
+  height: 4px;
+  width: 100%;
+  background: rgb(237, 237, 237);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.serviceNav {
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+  z-index: 100;
+  top: 10vh;
+  background: #fff;
+  border-bottom: 4px solid rgb(237, 237, 237);
+  padding-bottom: 1.5rem;
+}
+.serviceNav .img {
+  width: 10rem;
+  aspect-ratio: 1/1;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.serviceNav > div {
+  border-radius: 0.5rem;
+  /* background: #eff2ff; */
+  /* box-shadow: 0 3px 5px 0 rgba(216, 216, 216, 0.7); */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.serviceNav .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.serviceNav p {
+  text-align: center;
+  font-weight: 500;
+  color: #030921;
+  font-size: 1.5rem;
+}
+
+.listing {
+  min-height: 40vh;
+}
+.serviceNav .img img:hover {
+  border: 2px solid var(--primary-font-color);
+}
+.electrician .detail .img::before {
+  display: none;
+}
+
+.electrician .detail {
+  padding-top: 0;
+}
+.electrician .detail .lists h2::before {
+  display: none;
+}
+/* New services design End */
+/* serviceListing design Start */
+
+.serviceListing {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  /* overflow: hidden; */
+  position: relative;
+}
+.serviceListing .accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #aaa;
+  padding: 1rem 0;
+}
+
+.serviceListing .accordion-item .accordion-button::after {
+  display: none;
+}
+
+.viewD {
+  color: #6e42e5;
+  font-size: 1.4rem;
+  background: transparent;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mainList {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.includeContent {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.detailImg {
+  width: 12%;
+  height: 12%;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.detailImg img {
+  border-radius: inherit;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.detailImg button {
+  position: absolute;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #030921;
+  font-weight: 500;
+  border-radius: .5rem;
+  bottom: -1rem;
+  left: 50%;
+  padding: .6rem;
+  width: 7rem;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.includeContent .detailImg {
+  width: 12%;
+}
+.includeContent h4 {
+  font-size: 1.8rem;
+}
+.includeContent p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #545454;
+}
+.incTxt {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.detailImg img {
+  height: 100%;
+  object-fit: cover;
+}
+.mainList h2 {
+  color: #030921;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+.mainList ul li {
+  font-size: 1.4rem;
+  color: #545454;
+  list-style: disc;
+}
+.mainList ul {
+  margin-left: 2rem;
+}
+.serviceListing .accordion {
+  position: relative;
+  padding: 0 3rem;
+}
+.serviceListing .accordion::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: #545454;
+}
+.saveCards {
+  background: rgb(237, 237, 237);
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  width: fit-content;
+  font-weight: 500;
+  height: fit-content;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.saveCards i {
+  margin-right: 0.6rem;
+  color: #25d366;
+}
+.rightListing {
+  position: sticky;
+  height: calc(100vh - 35vh);
+  top: 35vh;
+  right: 0;
+  left: 0;
+}
+/* serviceListing design End */
 
 /* GENERAL MOBILE RESPONSIVE STYLES  */
 @media (max-width: 991px) {
@@ -1250,7 +1542,8 @@ footer {
   .scrollTop.whatsapp {
     width: 5rem;
     font-size: 2.5rem;
-    bottom: 3.9rem;
+    /* bottom: 3.9rem; */
+    right: 3rem;
   }
 }
 
@@ -1344,23 +1637,38 @@ footer {
   .headline .d-flex {
     gap: 0.8rem;
   }
+
+  #comingSVG {
+    width: 90%;
+  }
+
+  .comingsoon .fa-xmark {
+    font-size: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
+
 .icons .fa-facebook,
 .headline .icons .fa-facebook {
   color: #3b5998;
 }
+
 .icons .fa-twitter,
 .headline .icons .fa-twitter {
   color: #00acee;
 }
+
 .icons .fa-instagram,
 .headline .icons .fa-instagram {
   color: #dc2743;
 }
+
 .icons .fa-apple,
 .headline .icons .fa-apple {
   color: #555555;
 }
+
 /* .icons .fa-google-play {
   color: #00C9FF;
 } */
