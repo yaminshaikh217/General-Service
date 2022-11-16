@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"); */
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
 /* General Style  */
 *,
 *::before,
@@ -10,12 +10,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   /* 1rem = 10 px*/
   height: 100%;
+  text-rendering: optimizeSpeed;
 }
 
 :root {
@@ -24,6 +25,8 @@ html {
 }
 
 body {
+  font-family: "Gilroy-Regular", sans-serif;
+  /* font-family: "Poppins", sans-serif;   */
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -478,16 +481,19 @@ footer {
 }
 
 .scrollTop.whatsapp {
-  background: #25d366;
+  background: transparent;
   /* right: unset; */
   /* left: 3rem; */
   bottom: 10rem;
   width: 8rem;
   right: 1rem;
   border-radius: 50%;
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
+  box-shadow: none;
 }
-
+.scrollTop.whatsapp {
+  filter: drop-shadow(3px 1px 0px rgba(26, 26, 26,0.2));
+}
 .scrollTop.active {
   opacity: 1;
 }
@@ -1386,10 +1392,10 @@ footer {
   background: #fff;
   color: #030921;
   font-weight: 500;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   bottom: -1rem;
   left: 50%;
-  padding: .6rem;
+  padding: 0.6rem;
   width: 7rem;
   transform: translateX(-50%);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -1540,10 +1546,10 @@ footer {
   }
 
   .scrollTop.whatsapp {
-    width: 5rem;
+    width: 7rem;
     font-size: 2.5rem;
     /* bottom: 3.9rem; */
-    right: 3rem;
+    right: 2rem;
   }
 }
 

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import avatar from "../assets/avatarsvg.svg";
 
 const Testimonial = () => {
-  const settings = {
+  const settings = {  
     dots: true,
     infinite: false,
     speed: 500,
@@ -65,6 +65,7 @@ const Testimonial = () => {
       description:
         "Excellent plumbing service. Was very friendly, patient and helpful in helping us find what we were looking for.I would recommend them unreservedly.",
       isFiveStart: false,
+      isEmptyStart:true,
     },
     {
       name: "Dipen Shah",
@@ -100,8 +101,12 @@ const Testimonial = () => {
                         ) : (
                           ""
                         )}
-                        {curr?.isHalfStar ? (
+                        {curr?.isEmptyStart ? (
                           <i className="fa-regular fa-star-half-stroke"></i>
+                        ) : (
+                          ""
+                        )}{curr?.isHalfStar ? (
+                          <i className="fa-regular fa-star"></i>
                         ) : (
                           ""
                         )}

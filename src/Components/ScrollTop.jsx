@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import whatsapp from "../assets/whatsapp.png"
 
 const ScrollTop = () => {
   useEffect(() => {
@@ -23,7 +24,8 @@ const ScrollTop = () => {
       </div>
       <a href="https://wa.me/+916359001001" target='_blank'>
         <div className={`scrollTop whatsapp ${show ? "active" : ""}`}>
-          <i className="fa-brands fa-whatsapp"></i>
+          {/* <i className="fa-brands fa-whatsapp"></i> */}
+          <img src={whatsapp} alt="whatsapp" />
         </div>
       </a>
     </>
