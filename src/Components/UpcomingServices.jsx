@@ -4,9 +4,9 @@ import carpenter2 from "../assets/carpenter2.png";
 import carwash from "../assets/carwash.png";
 import carwash1 from "../assets/carwash1.png";
 import carwash2 from "../assets/carwash2.png";
-import event from "../assets/event.png";
-import event1 from "../assets/event1.png";
-import event2 from "../assets/event2.png";
+// import event from "../assets/event.png";
+// import event1 from "../assets/event1.png";
+// import event2 from "../assets/event2.png";
 import fabrication from "../assets/fabrication.png";
 import fabrication1 from "../assets/fabrication1.png";
 import fabrication2 from "../assets/fabrication2.png";
@@ -16,13 +16,15 @@ import movers2 from "../assets/movers2.png";
 import painting from "../assets/painting.png";
 import painting1 from "../assets/painting1.png";
 import painting2 from "../assets/painting2.png";
-import photographer from "../assets/photographer.png";
-import photographer1 from "../assets/photographer1.png";
-import photographer2 from "../assets/photographer2.png";
+// import photographer from "../assets/photographer.png";
+// import photographer1 from "../assets/photographer1.png";
+// import photographer2 from "../assets/photographer2.png";
 import salon from "../assets/salon.png";
 import salon1 from "../assets/salon1.png";
 import salon2 from "../assets/salon2.png";
 import { Link } from "react-router-dom";
+import DetailPage from "./DetailPage";
+import { useState } from "react";
 
 const UpcomingServices = () => {
   const serviceDetail = [
@@ -74,30 +76,30 @@ const UpcomingServices = () => {
       d2: "In every cut and angle, materials match project specs to ensure adherence timelines and sequencing.",
       d3: "Complex jobs. Difficult installations. Artistic beauty. Creativity is found across our wide breadth of work.",
     },
-    {
-      img: photographer,
-      img1: photographer1,
-      img2: photographer2,
-      title: "Photography",
-      t1: "Picture Perfect",
-      t2: "Commercial Photography",
-      t3: "Event Photography",
-      d1: "Showcase your photographs with multiple presentations including full-screen slideshows, lightbox, and more. You upload high-res images and set a focal point",
-      d2: "We are specializes in all types of commercial photography.  Our photographers know that professional imagery impacts on sales.  We can help give your business a visual identity through advertising imagery, corporate portraits, or product images.",
-      d3: "We believe that on your big day we are telling a story. Capturing those special moments and emotions in a natural style are what we do best. Documenting your big day is an important decision, so with this in mind contact us today for further information on our service.",
-    },
-    {
-      img: event,
-      img1: event1,
-      img2: event2,
-      title: "Event Management",
-      t1: "Creative Ideas",
-      t2: "Professional Event Delivery",
-      t3: "Manage Your Budget ",
-      d1: "Creating a 'Wow!' factor is an essential part of making a memorable event. A good event company will have a strong creative team providing ideas for your event and will work with you to achieve an unforgettable end result.",
-      d2: "An event management company can take care of all the organisation and tasks to deliver a successful event, allowing you to focus on the day and your guests. The true quality of the service will show if there is a problem. A good event management company will have contingencies in case plan A or B doesn’t work.",
-      d3: "Your budget will be managed by an experienced event planner who will understand the costs involved and be able to provide estimates on any extras or changes in the event format or scope.",
-    },
+    // {
+    //   img: photographer,
+    //   img1: photographer1,
+    //   img2: photographer2,
+    //   title: "Photography",
+    //   t1: "Picture Perfect",
+    //   t2: "Commercial Photography",
+    //   t3: "Event Photography",
+    //   d1: "Showcase your photographs with multiple presentations including full-screen slideshows, lightbox, and more. You upload high-res images and set a focal point",
+    //   d2: "We are specializes in all types of commercial photography.  Our photographers know that professional imagery impacts on sales.  We can help give your business a visual identity through advertising imagery, corporate portraits, or product images.",
+    //   d3: "We believe that on your big day we are telling a story. Capturing those special moments and emotions in a natural style are what we do best. Documenting your big day is an important decision, so with this in mind contact us today for further information on our service.",
+    // },
+    // {
+    //   img: event,
+    //   img1: event1,
+    //   img2: event2,
+    //   title: "Event Management",
+    //   t1: "Creative Ideas",
+    //   t2: "Professional Event Delivery",
+    //   t3: "Manage Your Budget ",
+    //   d1: "Creating a 'Wow!' factor is an essential part of making a memorable event. A good event company will have a strong creative team providing ideas for your event and will work with you to achieve an unforgettable end result.",
+    //   d2: "An event management company can take care of all the organisation and tasks to deliver a successful event, allowing you to focus on the day and your guests. The true quality of the service will show if there is a problem. A good event management company will have contingencies in case plan A or B doesn’t work.",
+    //   d3: "Your budget will be managed by an experienced event planner who will understand the costs involved and be able to provide estimates on any extras or changes in the event format or scope.",
+    // },
     {
       img: movers,
       img1: movers1,
@@ -123,18 +125,15 @@ const UpcomingServices = () => {
       d3: "We know it takes the right tools to create the perfect manicure, that’s why have everything you need to run your business in one place. Find colours, tools and more with Salon Services.",
     },
   ];
-
-  // const storeInfo = (e) => {
-  //   localStorage.setItem("t1", serviceDetail[e.target.id].t1);
-  //   localStorage.setItem("t2", serviceDetail[e.target.id].t2);
-  //   localStorage.setItem("t3", serviceDetail[e.target.id].t3);
-  //   localStorage.setItem("d1", serviceDetail[e.target.id].d1);
-  //   localStorage.setItem("d2", serviceDetail[e.target.id].d2);
-  //   localStorage.setItem("d3", serviceDetail[e.target.id].d3);
-  //   localStorage.setItem("img", serviceDetail[e.target.id].img);
-  //   localStorage.setItem("img1", serviceDetail[e.target.id].img1);
-  //   localStorage.setItem("img2", serviceDetail[e.target.id].img2);
-  // };
+  const [hide, sethide] = useState({
+    value: "",
+    dynamic: false,
+  });
+  const handleHide = (e) => {
+    sethide((prev) => {
+      return {  dynamic: !hide, value: e.target.id };
+    });
+  };
   return (
     <>
       <section className="upcomingServices">
@@ -142,22 +141,36 @@ const UpcomingServices = () => {
         <div className="container">
           <div className="cardContainer">
             {serviceDetail.map((curr, idx) => {
+              {
+                /* <Link to="/details" state={serviceDetail[idx]} key={idx}> */
+              }
+              {
+                /* </Link> */
+              }
               return (
-                <Link to="/details" state={serviceDetail[idx]} key={idx}>
-                  <div className="cards" key={idx}>
-                    <div className="img position-relative">
-                      <img src={curr.img} alt={curr.title} />
-                      <div className="content">
-                        <h3 className="heading">{curr.title}</h3>
-                      </div>
+                <div
+                  className="cards"
+                  key={idx}
+                  onClick={handleHide}
+                  id={curr.title}
+                >
+                  <div className="img position-relative">
+                    <img src={curr.img} alt={curr.title} />
+                    <div className="content">
+                      <h3 className="heading">{curr.title}</h3>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
         </div>
       </section>
+      <DetailPage
+        active={hide.value}
+        handleActive={handleHide}
+        checkValue={hide.value}
+      />
     </>
   );
 };

@@ -5,16 +5,10 @@ import sink from "../../assets/sink.png";
 import { useEffect } from "react";
 import ScrollTop from "../ScrollTop.jsx";
 
-const Electrician = () => {
+const Pest = () => {
     let arr = [
         {
-            title: "Electric Part Installation/Removal",
-        },
-        {
-            title: "Electric Repair",
-        },
-        {
-            title: "Customized Requirements",
+            title: "Pest Control",
         },
     ];
     useEffect(() => {
@@ -28,9 +22,9 @@ const Electrician = () => {
                 <div className="container">
                     <div className="heroElec">
                         <div>
-                            <h2>Electrician </h2>
+                            <h2>Pest Control</h2>
                             <p>
-                                Don’t let your electric issues give you shocks when Fair Deal is here to handle all your requirements!
+                                Make your premises free of all small yet horrifying pests that destroy the aesthetics & appearance of your home.
                             </p>
                         </div>
                         <div>
@@ -55,10 +49,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Part Installation/Removal</h2>
+                                        <h2>Pest Control</h2>
                                         <ul>
-                                            <li>Professional installation of electronic devices </li>
-                                            <li>Remove machines/devices without any damage </li>
+                                            <li>In-depth inspection of the suspected area </li>
+                                            <li>Tried-and-tested methods to kill & prevent pests  </li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -91,9 +85,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Installation/Removal</h4>
+                                                <h4>Detailed Inspection</h4>
                                                 <p>
-                                                    Install/remove any electronic machine or device of your choice
+                                                    A thorough inspection of affected areas before beginning the work
                                                 </p>
                                             </div>
                                         </div>
@@ -102,8 +96,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Wiring</h4>
-                                                <p>Wiring required to install/remove electronic appliances of your premises </p>
+                                                <h4>Chemical Application </h4>
+                                                <p>Applying treatment to kill pests & prevent further breeding  </p>
                                             </div>
                                         </div>
                                         <div className="includeContent">
@@ -112,15 +106,14 @@ const Electrician = () => {
                                             </div>
                                             <div>
                                                 <h4>Clean-up</h4>
-                                                <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                <p>Cleaning of the surrounding if it has been dusted or unorganized
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="accordion-item">
+                            {/* <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
                                         <h2>Electric Repair</h2>
@@ -259,7 +252,7 @@ const Electrician = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* -----------------  FAQ  --------------- */}
                             <h2 className="mt-4">Frequently Asked Question</h2>
@@ -274,7 +267,7 @@ const Electrician = () => {
                                             aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseFour"
                                         >
-                                            What are the electrician charges in Ahmedabad?
+                                            What are the pest control charges in Ahmedabad?
                                             <i className="fa-solid fa-chevron-down"></i>
                                         </button>
                                     </div>
@@ -377,4 +370,4 @@ const Electrician = () => {
     );
 };
 
-export default Electrician;
+export default Pest;

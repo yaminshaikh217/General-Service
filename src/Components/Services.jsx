@@ -22,63 +22,72 @@ import { Link, useNavigate } from "react-router-dom";
 const Services = () => {
   const serviceDetail = [
     {
-      img: plumber,
-      img1: plumber1,
-      img2: plumber2,
-      title: "Plumbing",
-      description:
-        "There are many different types of plumbing systems, including pipes, pumps, valves, faucets, fixtures, and drains. A plumber is someone who specializes in repairing, installing, and maintaining these systems.",
-    },
-    {
       img: ac,
       img1: ac1,
       img2: ac2,
-      title: "Air Conditioner Repairing",
+      title: "Air Conditioner",
+      link: "airconditioner",
       description:
         "The air conditioning technicians install, inspect, maintain, and repair air conditioner. They ventilate equipment and controls making sure they operate efficiently. They perform regular maintenance work on cooling units.",
-    },
-    {
-      img: electrician,
-      img1: electrician1,
-      img2: electrician2,
-      title: "Electrician",
-      description:
-        "Our Electrician are expert in installing, maintaining, and repairing electrical control, wiring, and lighting systems. Reading technical diagrams and blueprints. Performing general electrical maintenance.",
     },
     {
       img: cleaning,
       img1: cleaning1,
       img2: cleaning2,
       title: "Cleaning",
+      link: "cleaning",
       description:
-        "Dusting cabinets, cupboards, showcases, walls, underneath mattresses, behind tapestries and picture frames. Cleaning kitchens in order to make sure that no eating areas are ever unhygienic.",
+        "Starting from a full home, kitchen, sofa, cushion, carpet, bathroom, and toilet; clean everything that dulls your life because you deserve the only best!",
     },
+
+    {
+      img: electrician,
+      img1: electrician1,
+      img2: electrician2,
+      title: "Electrician",
+      link: "electrician",
+      description:
+        "Be it as small as changing a switchboard or something customized, our expert and experienced electricians are all there to help you.",
+    },
+
     {
       img: pest,
       img1: pest1,
       img2: pest2,
       title: "Pest Control",
+      link: "pest",
       description:
-        "Our Technician is responsible for identifying and applying chemicals or manual solutions to eliminate pests. They also use tools like traps that are designed specifically.",
+        "Say bye-bye to pests with our tried-and-tested methodology to give your the worry and shame-free life you deserve!.",
     },
+    {
+      img: plumber,
+      img1: plumber1,
+      img2: plumber2,
+      link:"plumbing",
+      title: "Plumbing",
+      description:
+        "Starting from pipeline installations to leakage and custom requirements, we help you with your all plumbing requirements! ",
+    },
+
     {
       img: ro,
       img1: ro1,
       img2: ro2,
       title: "RO Cleaning",
+      link: "ro-cleaning",
       description:
-        "Get Your RO Water Purifier Service by Certified Experienced Technicians in Ahmedabad. RO Routine Service, RO Repair, RO Installation, Tank Cleaning, TDS Check & Filter Change.",
+        "End-to-end water purifier services, inclusive of installation/uninstallation, check-up, repair, and maintenance! ",
     },
   ];
   return (
     <>
-      <section className="services" id="service">
+      <section className="services" id="serviceId">
         <h2 className="genHeading text-center">Our Services</h2>
         <div className="container">
           <div className="cardContainer">
             {serviceDetail.map((curr, idx) => {
               return (
-                <Link to="/electrician" key={idx}>
+                <Link to={`${curr.link}`} key={idx}>
                   <div className="cards" key={idx}>
                     <div className="img">
                       <img src={curr.img} alt={curr.title} />

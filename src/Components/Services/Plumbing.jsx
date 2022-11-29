@@ -5,13 +5,13 @@ import sink from "../../assets/sink.png";
 import { useEffect } from "react";
 import ScrollTop from "../ScrollTop.jsx";
 
-const Electrician = () => {
+const Plumbing = () => {
     let arr = [
         {
-            title: "Electric Part Installation/Removal",
+            title: "Connection Hose Installation",
         },
         {
-            title: "Electric Repair",
+            title: "Pipeline Leakage Repair",
         },
         {
             title: "Customized Requirements",
@@ -28,9 +28,9 @@ const Electrician = () => {
                 <div className="container">
                     <div className="heroElec">
                         <div>
-                            <h2>Electrician </h2>
+                            <h2>Plumbing</h2>
                             <p>
-                                Don’t let your electric issues give you shocks when Fair Deal is here to handle all your requirements!
+                                Don’t let your plumbing problems become life-troubling and irritating issues with Fair Deal’s quick & affordable plumbing services.
                             </p>
                         </div>
                         <div>
@@ -55,10 +55,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Part Installation/Removal</h2>
+                                        <h2>Connection Hose Installation</h2>
                                         <ul>
-                                            <li>Professional installation of electronic devices </li>
-                                            <li>Remove machines/devices without any damage </li>
+                                            <li>Installation of the connection hose to the inlet & outlet </li>
+                                            <li>Hard water softening attachment installation, if required</li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -91,9 +91,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Installation/Removal</h4>
+                                                <h4>Hose Installation</h4>
                                                 <p>
-                                                    Install/remove any electronic machine or device of your choice
+                                                    Get up to two installations of hose connection
                                                 </p>
                                             </div>
                                         </div>
@@ -102,8 +102,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Wiring</h4>
-                                                <p>Wiring required to install/remove electronic appliances of your premises </p>
+                                                <h4>Replacement & Adjustment  </h4>
+                                                <p>Replacement & adjustment of up to two connection hose</p>
                                             </div>
                                         </div>
                                         <div className="includeContent">
@@ -111,9 +111,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
-                                                <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                <h4>Multiple Types</h4>
+                                                <p>Get a hose of your choice including PVC, rubber, & flexible steel
                                                 </p>
                                             </div>
                                         </div>
@@ -123,12 +122,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Repair</h2>
+                                        <h2>Pipeline Leakage Repair</h2>
                                         <ul>
                                             <li>Inspection to identify or confirm the stated problem</li>
-                                            <li>
-                                                Repairing of respective electronic device
-                                            </li>
+                                            <li>Repairing the affected pipeline(s) </li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -172,7 +169,7 @@ const Electrician = () => {
                                             <div>
                                                 <h4>Repairing </h4>
                                                 <p>
-                                                    Repairing of electronics supported by modern tools and machines
+                                                    Leakage repair of galvanized iron or PVC pipes with either joint pipe or MSeal (Charged extra)
                                                 </p>
                                             </div>
                                         </div>
@@ -181,9 +178,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
+                                                <h4>15-days warranty</h4>
                                                 <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                    We take a warranty on our work so that you don’t have to worry at all!
                                                 </p>
                                             </div>
                                         </div>
@@ -274,7 +271,7 @@ const Electrician = () => {
                                             aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseFour"
                                         >
-                                            What are the electrician charges in Ahmedabad?
+                                            What are the plumbing control charges in Ahmedabad?
                                             <i className="fa-solid fa-chevron-down"></i>
                                         </button>
                                     </div>
@@ -377,4 +374,4 @@ const Electrician = () => {
     );
 };
 
-export default Electrician;
+export default Plumbing;

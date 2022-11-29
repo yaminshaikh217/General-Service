@@ -3,6 +3,7 @@ import { useState } from "react";
 import Comingsoon from "./Comingsoon";
 import play from "../assets/googleplay.png";
 import apple from "../assets/appstore.png";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const [coming, setcoming] = useState(false);
@@ -20,6 +21,8 @@ const Footer = () => {
           </div>
           <div>
             <p>Copyright 2022. All Rights Reserved</p>
+            <NavLink to='/terms'><p>Terms Condition</p></NavLink>
+            <NavLink to='/privacy'><p>Privacy Policy</p></NavLink>
           </div>
           <div className="icons d-flex-jcc-alc">
             <a
@@ -35,10 +38,10 @@ const Footer = () => {
             >
               <i className="fa-brands fa-instagram"></i>
             </a>
-            <div>
+            <div onClick={handleComingSoon}>
               <img src={play} alt="googleplaystore" />
             </div>
-            <div>
+            <div onClick={handleComingSoon}>
               <img src={apple} alt="googleplaystore" />
             </div>
             {/* <i

@@ -22,7 +22,16 @@ const ContactPopup = ({ active, handleClick }) => {
               </div>
               <div className="formEvenCols">
                 <div className="input">
-                  <input type="text" placeholder="Service" />
+                  {/* <input type="text" placeholder="Service" /> */}
+                  <select name="service" id="service">
+                    <option value="">Select services</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="ac">Air Conditioner Repairing</option>
+                    <option value="electrician">Electrician</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="pest">Pest Control</option>
+                    <option value="ro">RO Cleaning</option>
+                  </select>
                 </div>
                 <div className="input">
                   <input type="text" placeholder="Location" />

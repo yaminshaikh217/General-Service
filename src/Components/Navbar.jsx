@@ -57,10 +57,10 @@ const Navbar = () => {
             <Link to="/">
               <li onClick={() => window.scrollTo({ top: 0 })}>HOME</li>
             </Link>
-            <a href="/#about">
+            <a href="/#abouts">
               <li>ABOUT</li>
             </a>
-            <a href="/#service">
+            <a href="/#serviceId">
               <li>SERVICES</li>
             </a>
             <a href="/#contactus">

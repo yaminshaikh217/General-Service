@@ -1,27 +1,24 @@
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+// import Navbar from "./Navbar";
+// import Footer from "./Footer";
 
-const DetailPage = () => {
-  let location = useLocation();
-  let detail = location.state;
+const DetailPage = ({ active, handleActive , checkValue}) => {
+  // let location = useLocation();
+  // let detail = location.state;
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
-  // let t1 =localStorage.getItem("t1");
-  // let t2 = localStorage.getItem("t2");
-  // let t3 =localStorage.getItem("t3");
-  // let d1 = localStorage.getItem("d1");
-  // let d2 =localStorage.getItem("d2");
-  // let d3 = localStorage.getItem("d3");
-  // let img =localStorage.getItem("img");
-  // let img1 =localStorage.getItem("img1");
-  // let img2 =localStorage.getItem("img2");
+    active
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "scroll");
+  }, [active]);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0 });
+  // }, []);
+
   return (
     <>
-      <Navbar />
-      <section className="detail">
+      {/* <Navbar /> */}
+      {/* <section className="detail">
         <div className="parent">
           <div className="detailEvenCols">
             <div>
@@ -63,8 +60,44 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      {/* <Footer /> */}
+      <section className={`upDetailForm contact fixed ${active ? "show" : ""}`}>
+        <i className="fa-solid fa-xmark" onClick={handleActive}></i>
+        <h3 className="genHeading text-center">
+          If you are interested in this service please fill the below form. 
+        </h3>
+        <div className="formContainer">
+          <div className="right">
+            <form>
+              <div className="formEvenCols">
+                <div className="input">
+                  <input type="text" placeholder="Your Name" />
+                </div>
+              </div>
+              <div className="formEvenCols">
+                <div className="input">
+                  <input type="number" placeholder="Your Phone" />
+                </div>
+              </div>
+              <div className="formEvenCols">
+                <div className="input">
+                  <input type="email" placeholder="Email" />
+                </div>
+              </div>
+              <div className="checkBox">
+                <input type="checkbox" id="upcoming" value={checkValue} />
+                <label htmlFor="upcoming">
+                  Iam Interested in {checkValue} service.
+                </label>
+              </div>
+              <button className="submit" type="submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
-      <Footer />
     </>
   );
 };

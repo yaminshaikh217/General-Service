@@ -1,5 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"); */
 @import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+
 /* General Style  */
 *,
 *::before,
@@ -10,13 +11,11 @@
 }
 
 html {
-  /* font-family: "Poppins", sans-serif; */
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   /* 1rem = 10 px*/
   height: 100%;
-  text-rendering: optimizeSpeed;
 }
 
 :root {
@@ -25,8 +24,8 @@ html {
 }
 
 body {
+  /* font-family: "Poppins", sans-serif; */
   font-family: "Gilroy-Regular", sans-serif;
-  /* font-family: "Poppins", sans-serif;   */
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -74,24 +73,29 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+
 .d-flex-jcc-alc {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /* Navbar style start */
 .navbar {
   background: rgba(3, 9, 33, 1);
   position: sticky;
   top: -2px;
-  /* backdrop-filter: blur(3px); */
-  z-index: 1000;
+  z-index: 200;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.logo>* {
+  z-index: 10;
 }
 
 .logo h2 {
@@ -231,7 +235,7 @@ input[type="number"]::-webkit-outer-spin-button {
   /* top: -10vh; */
 }
 
-.heroBg > * {
+.heroBg>* {
   z-index: 10;
   color: #fff;
 }
@@ -335,14 +339,21 @@ footer {
   color: #0e1454;
   margin-right: 2rem;
 }
+
+.footer a {
+  color: #fff;
+}
+
 .icons div:has(img) {
   width: 24%;
   cursor: pointer;
   margin-right: 2rem;
 }
+
 .icons a {
   display: contents;
 }
+
 @media (max-width: 768px) {
   .footer {
     font-size: 1.5rem;
@@ -373,7 +384,8 @@ footer {
 }
 
 .evenCols h2,
-.genHeading {
+.genHeading,
+.counter-numbers {
   color: var(--primary-font-color);
   font-size: 4rem;
   font-weight: 700;
@@ -381,9 +393,14 @@ footer {
   margin-bottom: 3rem;
 }
 
+.counter-numbers {
+  margin-bottom: 1rem !important;
+}
+
 .evenCols p {
   font-size: 1.6rem;
   color: #0b1a39;
+  margin-bottom: 1.2rem;
 }
 
 .evenCols .num {
@@ -452,6 +469,19 @@ footer {
   height: 100%;
 }
 
+.autoNumBox {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.autoNumBox>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .evenCols {
     grid-template-columns: 1fr;
@@ -476,6 +506,7 @@ footer {
   font-size: 1.8rem;
   cursor: pointer;
   opacity: 0;
+  z-index: 999;
   box-shadow: rgba(28, 28, 28, 0.5) 0px 5px 7px;
   transition: all 0.3s linear;
 }
@@ -491,9 +522,11 @@ footer {
   /* font-size: 3.5rem; */
   box-shadow: none;
 }
+
 .scrollTop.whatsapp {
-  filter: drop-shadow(3px 1px 0px rgba(26, 26, 26,0.2));
+  filter: drop-shadow(3px 1px 0px rgba(26, 26, 26, 0.2));
 }
+
 .scrollTop.active {
   opacity: 1;
 }
@@ -503,7 +536,7 @@ footer {
 /* Services styles starts */
 .services,
 .upcomingServices {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: #f7fcff;
   padding: 4rem 0;
 }
@@ -617,7 +650,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.clippyCard > * {
+.clippyCard>* {
   transform: skewX(-6deg) rotate(-6deg);
   text-align: center;
 }
@@ -755,6 +788,7 @@ footer {
   transition: all 0.2s ease-in;
   color: var(--primary-font-color);
 }
+
 .testimonialSliders:hover .stars i {
   transition: all 0.2s ease-in;
   color: #ffcd3c;
@@ -776,6 +810,7 @@ footer {
 .testimonialSliders .client {
   font-size: 2rem;
 }
+
 .stars {
   display: flex;
   justify-content: center;
@@ -783,10 +818,12 @@ footer {
   gap: 1rem;
   margin-top: 2rem;
 }
+
 .stars i {
   color: #ffcd3c;
   font-size: 2rem;
 }
+
 .testimonialSliders .clientImage img {
   width: 100%;
   height: 100%;
@@ -824,11 +861,13 @@ footer {
   height: inherit;
   border-radius: inherit;
 }
+
 .slick-dots li,
 .slick-dots li button {
   width: 16px;
   height: 16px;
 }
+
 @media (max-width: 768px) {
   .testimonialSliders {
     padding: 3rem 2rem;
@@ -887,7 +926,7 @@ footer {
 
 .contact.fixed {
   position: fixed;
-  z-index: 999999;
+  z-index: 999;
   left: 50%;
   top: 50%;
   padding: 2rem;
@@ -899,6 +938,12 @@ footer {
   min-width: 50rem;
   pointer-events: none;
   transition: all 0.3s ease-in;
+}
+
+.upDetailForm.contact.fixed {
+  min-width: unset;
+  width: 50rem;
+  padding: 5rem;
 }
 
 .contact.fixed.show {
@@ -969,11 +1014,14 @@ footer {
   font-size: 1.6rem;
   transition: all 0.2s linear;
 }
+
 .form .info:hover {
   color: var(--primary-font-color);
 }
+
 .contact .input input,
-.contact textarea {
+.contact textarea,
+.contact select {
   border: 1px solid #dddddd;
   padding: 1rem;
   caret-color: var(--primary-font-color);
@@ -1011,6 +1059,24 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+
+.upDetailForm .formEvenCols {
+  grid-template-columns: 1fr;
+}
+
+.upDetailForm .genHeading {
+  font-size: 2.5rem;
+}
+
+.checkBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .contactBtn {
@@ -1082,6 +1148,7 @@ footer {
 .detail .parent .detailEvenCols:nth-child(2) .lists h2::before {
   content: "02";
 }
+
 .detail .parent .detailEvenCols:nth-child(3) .lists h2::before {
   content: "03";
 }
@@ -1237,6 +1304,7 @@ footer {
 .comingsoon .fa-xmark:hover {
   transform: rotate(90deg);
 }
+
 .getApp {
   background: #030921;
   color: #fff;
@@ -1245,6 +1313,7 @@ footer {
   font-weight: 500;
   padding: 0.7rem 1.5rem;
 }
+
 /* coming soon end */
 
 /* New services design start  */
@@ -1253,18 +1322,22 @@ footer {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-.heroElec > div {
+
+.heroElec>div {
   padding: 4rem;
 }
+
 .heroElec h2 {
   color: var(--primary-font-color);
   font-weight: 500;
   font-size: 3.5rem;
 }
+
 .heroElec p {
   font-size: 1.8rem;
   color: #030921;
 }
+
 .horizonLine {
   height: 4px;
   width: 100%;
@@ -1273,6 +1346,7 @@ footer {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+
 .serviceNav {
   display: flex;
   gap: 1rem;
@@ -1283,6 +1357,7 @@ footer {
   border-bottom: 4px solid rgb(237, 237, 237);
   padding-bottom: 1.5rem;
 }
+
 .serviceNav .img {
   width: 10rem;
   aspect-ratio: 1/1;
@@ -1290,7 +1365,8 @@ footer {
   padding: 0.5rem;
   cursor: pointer;
 }
-.serviceNav > div {
+
+.serviceNav>div {
   border-radius: 0.5rem;
   /* background: #eff2ff; */
   /* box-shadow: 0 3px 5px 0 rgba(216, 216, 216, 0.7); */
@@ -1300,6 +1376,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .serviceNav .img img {
   width: 100%;
   height: 100%;
@@ -1309,6 +1386,7 @@ footer {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
+
 .serviceNav p {
   text-align: center;
   font-weight: 500;
@@ -1319,9 +1397,11 @@ footer {
 .listing {
   min-height: 40vh;
 }
+
 .serviceNav .img img:hover {
   border: 2px solid var(--primary-font-color);
 }
+
 .electrician .detail .img::before {
   display: none;
 }
@@ -1329,21 +1409,24 @@ footer {
 .electrician .detail {
   padding-top: 0;
 }
+
 .electrician .detail .lists h2::before {
   display: none;
 }
+
 /* New services design End */
 /* serviceListing design Start */
 
 .serviceListing {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 75% 25%;
   gap: 2rem;
   padding: 2rem 0;
   padding-bottom: 3rem;
   /* overflow: hidden; */
   position: relative;
 }
+
 .serviceListing .accordion-item {
   margin-bottom: 1rem;
   border: 1px solid transparent;
@@ -1351,9 +1434,9 @@ footer {
   padding: 1rem 0;
 }
 
-.serviceListing .accordion-item .accordion-button::after {
+/* .serviceListing .accordion-item .accordion-button::after {
   display: none;
-}
+} */
 
 .viewD {
   color: #6e42e5;
@@ -1363,18 +1446,39 @@ footer {
   padding: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
+
+.faqBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqBtn i.fa-chevron-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+}
+
+.faqBtn:not(.collapsed) i.fa-chevron-down {
+  transition: transform 0.3s ease-out;
+  transform: rotate(180deg);
+}
+
 .mainList {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
+
 .includeContent {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   margin-bottom: 2rem;
 }
+
 .detailImg {
   width: 12%;
   height: 12%;
@@ -1382,60 +1486,73 @@ footer {
   position: relative;
   border-radius: 0.5rem;
 }
+
 .detailImg img {
   border-radius: inherit;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 .detailImg button {
   position: absolute;
   font-size: 1.2rem;
   background: #fff;
   color: #030921;
   font-weight: 500;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   bottom: -1rem;
   left: 50%;
-  padding: 0.6rem;
+  padding: .6rem;
   width: 7rem;
   transform: translateX(-50%);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 .includeContent .detailImg {
   width: 12%;
 }
+
 .includeContent h4 {
   font-size: 1.8rem;
 }
+
 .includeContent p {
   font-weight: 500;
   font-size: 1.4rem;
   color: #545454;
 }
+
 .incTxt {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+
 .detailImg img {
   height: 100%;
   object-fit: cover;
 }
+
 .mainList h2 {
   color: #030921;
   font-size: 2.1rem;
   margin-bottom: 1rem;
 }
-.mainList ul li {
+
+.mainList ul li,
+.faq li {
   font-size: 1.4rem;
   color: #545454;
   list-style: disc;
 }
+
 .mainList ul {
   margin-left: 2rem;
 }
+
 .serviceListing .accordion {
   position: relative;
   padding: 0 3rem;
 }
+
 .serviceListing .accordion::before {
   content: "";
   position: absolute;
@@ -1445,29 +1562,66 @@ footer {
   width: 1px;
   background: #545454;
 }
+
 .saveCards {
   background: rgb(237, 237, 237);
-  padding: 1rem 2.5rem;
+  padding: 1rem 3rem;
+  width: 80%;
   border-radius: 1rem;
-  width: fit-content;
   font-weight: 500;
   height: fit-content;
   margin-bottom: 1rem;
   cursor: pointer;
   font-size: 1.4rem;
 }
+
 .saveCards i {
   margin-right: 0.6rem;
   color: #25d366;
 }
+
 .rightListing {
   position: sticky;
   height: calc(100vh - 35vh);
-  top: 35vh;
+  top: 30vh;
   right: 0;
   left: 0;
 }
+
 /* serviceListing design End */
+
+/* TERMS CONDITION  START*/
+
+.terms .box {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.terms h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0;
+  font-weight: 600;
+}
+
+.terms p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.terms h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.terms .box div {
+  margin-bottom: 4rem;
+}
+
+/* TERMS CONDITION  END */
+
+
 
 /* GENERAL MOBILE RESPONSIVE STYLES  */
 @media (max-width: 991px) {
@@ -1492,8 +1646,24 @@ footer {
     flex-direction: column;
   }
 
-  .footer > div {
+  .footer>div {
     margin-bottom: 2rem;
+  }
+
+  .heroElec {
+    grid-template-columns: 1fr;
+  }
+
+  .heroElec div:nth-child(1) {
+    order: 2;
+  }
+
+  .heroElec>div {
+    padding: 2rem;
+  }
+
+  .serviceNav {
+    overflow-x: auto;
   }
 }
 
@@ -1520,8 +1690,62 @@ footer {
     flex-direction: column;
   }
 
-  .headline .container > div {
+  .headline .container>div {
     margin-bottom: 0.5rem;
+  }
+
+  .serviceListing {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceListing .rightListing {
+    order: 1;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .serviceListing .accordion {
+    order: 2;
+  }
+
+  .serviceListing .accordion::before {
+    display: none;
+  }
+
+  .serviceListing .accordion {
+    padding: 0 1rem;
+  }
+
+  .rightListing {
+    height: auto;
+    position: static;
+    top: unset;
+    left: unset;
+    right: unset;
+  }
+}
+
+@media (max-width: 576px) {
+  .electrician .container {
+    max-width: 95%;
+    margin-inline: auto;
+  }
+
+  .heroElec>div {
+    padding: 1rem;
+  }
+
+  .header {
+    width: 95%;
+  }
+  .serviceNav p {
+    font-size: 1.4rem;
+  }
+  .serviceNav {
+    gap: 3rem;
+  }
+  .serviceListing .accordion {
+    padding: 0;
   }
 }
 
@@ -1530,8 +1754,11 @@ footer {
     padding: 0 1rem;
   }
 
-  .contact.fixed {
+  .contact.fixed,
+  .upDetailForm.contact.fixed {
     min-width: 90%;
+    width: unset;
+    padding: 2rem;
   }
 
   .contact.fixed .fa-xmark {
@@ -1550,6 +1777,35 @@ footer {
     font-size: 2.5rem;
     /* bottom: 3.9rem; */
     right: 2rem;
+  }
+
+  .heroElec h2 {
+    font-size: 2.8rem;
+  }
+
+  .heroElec p {
+    font-size: 1.6rem;
+  }
+  .mainList {
+    flex-direction: column;
+  }
+  .detailImg {
+    width: 18%;
+    height: 18%;
+    margin-bottom: 1rem;
+  }
+  .incTxt {
+    margin-top: 1.5rem;
+  }
+  .accordion-body {
+    padding: 0;
+  }
+  .includeContent .detailImg {
+    width: 14%;
+  }
+  .includeContent h4 {
+    font-weight: 600;
+    font-size: 1.6rem;
   }
 }
 
@@ -1652,6 +1908,15 @@ footer {
     font-size: 2rem;
     width: 4.5rem;
     height: 4.5rem;
+  }
+
+  .contact .input input,
+  .contact textarea,
+  .contact select {
+    margin-bottom: 1rem;
+  }
+  .includeContent .detailImg {
+    width: 10rem;
   }
 }
 

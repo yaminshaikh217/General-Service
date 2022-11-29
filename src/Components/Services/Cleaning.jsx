@@ -5,16 +5,16 @@ import sink from "../../assets/sink.png";
 import { useEffect } from "react";
 import ScrollTop from "../ScrollTop.jsx";
 
-const Electrician = () => {
+const Cleaning = () => {
     let arr = [
         {
-            title: "Electric Part Installation/Removal",
+            title: "Sofa, Cushions & Carpet Cleaning ",
         },
         {
-            title: "Electric Repair",
+            title: "Toilet/Bathroom Cleaning",
         },
         {
-            title: "Customized Requirements",
+            title: "Full Home/Kitchen Cleaning",
         },
     ];
     useEffect(() => {
@@ -28,9 +28,9 @@ const Electrician = () => {
                 <div className="container">
                     <div className="heroElec">
                         <div>
-                            <h2>Electrician </h2>
+                            <h2>Cleaning </h2>
                             <p>
-                                Don’t let your electric issues give you shocks when Fair Deal is here to handle all your requirements!
+                                You are already dealing with enough tasks in your life but you don’t have to worry about cleaning - be it any, with Fair Deal!
                             </p>
                         </div>
                         <div>
@@ -50,15 +50,61 @@ const Electrician = () => {
                             );
                         })}
                     </div>
+                    {/* <div className="horizonLine"></div> */}
+                    {/* <div className="listing">
+            <section className="detail">
+              <div className="parent">
+                <div className="detailEvenCols">
+                  <div>
+                    <div className="img">
+                      <img src={sink} alt="image" />
+                    </div>
+                  </div>
+                  <div className="lists">
+                    <h2>Lorem.</h2>
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, autem.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="detailEvenCols">
+                  <div className="lists">
+                    <h2>Lorem.</h2>
+                    <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, autem.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="img">
+                      <img src={sink} alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <div className="detailEvenCols">
+                  <div>
+                    <div className="img">
+                      <img src={sink} alt="image" />
+                    </div>
+                  </div>
+                  <div className="lists">
+                    <h2>Lorem.</h2>
+                    <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, autem.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div> */}
                     <div className="serviceListing">
                         <div className="accordion" id="accordionPanelsStayOpenExample">
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Part Installation/Removal</h2>
+                                        <h2>Sofa, Cushions & Carpet Cleaning</h2>
                                         <ul>
-                                            <li>Professional installation of electronic devices </li>
-                                            <li>Remove machines/devices without any damage </li>
+                                            <li>Remove dust and dirt particles with dry vacuuming</li>
+                                            <li>Make your sofa shine with wet shampooing & Cleaning</li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -91,9 +137,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Installation/Removal</h4>
+                                                <h4>Dry Vacuuming </h4>
                                                 <p>
-                                                    Install/remove any electronic machine or device of your choice
+                                                    Elimination of accumulated dust particles, dirt, & debris from the targeted surface
                                                 </p>
                                             </div>
                                         </div>
@@ -102,8 +148,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Wiring</h4>
-                                                <p>Wiring required to install/remove electronic appliances of your premises </p>
+                                                <h4>Shampooing + Wet Vacuuming </h4>
+                                                <p>Sponging the sofa with shampoo followed by wet vacuuming & microfiber cloth wiping</p>
                                             </div>
                                         </div>
                                         <div className="includeContent">
@@ -111,9 +157,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
+                                                <h4>Drying</h4>
                                                 <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                    Let the sofa/cushion/carpet get dry before you use it and experience its newness!
                                                 </p>
                                             </div>
                                         </div>
@@ -123,12 +169,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Repair</h2>
+                                        <h2>Toilet/Bathroom Cleaning </h2>
                                         <ul>
-                                            <li>Inspection to identify or confirm the stated problem</li>
-                                            <li>
-                                                Repairing of respective electronic device
-                                            </li>
+                                            <li>Removal of yellow, hard-to-remove stains & dirt</li>
+                                            <li>Tile, floor, basin, cabinet & toilet pot cleaning </li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -161,18 +205,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Inspection </h4>
-                                                <p>Identifying the cause of damage followed by an accurate solution </p>
-                                            </div>
-                                        </div>
-                                        <div className="includeContent">
-                                            <div className="detailImg">
-                                                <img src={sink} alt="electrician" />
-                                            </div>
-                                            <div>
-                                                <h4>Repairing </h4>
+                                                <h4>Floor Deep Cleaning</h4>
                                                 <p>
-                                                    Repairing of electronics supported by modern tools and machines
+                                                    Effective scrubbing to remove dirt, deposits & hard water stains
                                                 </p>
                                             </div>
                                         </div>
@@ -181,9 +216,20 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
+                                                <h4>Stain Removal </h4>
                                                 <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                    Stain removal from floor tiles, washbasin, toilet pot, & mirror
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="includeContent">
+                                            <div className="detailImg">
+                                                <img src={sink} alt="electrician" />
+                                            </div>
+                                            <div>
+                                                <h4>Finishing </h4>
+                                                <p>
+                                                    Drying of bathroom/toilet with multi-fiber cloth & freshener spraying
                                                 </p>
                                             </div>
                                         </div>
@@ -193,10 +239,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Customized Requirements</h2>
+                                        <h2>Full Home/Kitchen Cleaning</h2>
                                         <ul>
-                                            <li>Bespoke solutions based on your requirements </li>
-                                            <li>Services by industry experts equipped with the latest tools & technology </li>
+                                            <li>All-in-one cleaning including wall, ceiling, windows, door & furniture</li>
+                                            <li>Stain removal along with goods removal & placing back</li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -229,9 +275,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Requirement Gathering  </h4>
+                                                <h4>Floor, Wall, and Ceiling Cleaning </h4>
                                                 <p>
-                                                    Tell us your unique and specific electric appliance service requirements
+                                                    Cleaning of the whole home with industrial machines & tools for ultra shine & smoothness
                                                 </p>
                                             </div>
                                         </div>
@@ -240,9 +286,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Custom Quotation </h4>
+                                                <h4>Mattress & Curtain Cleaning</h4>
                                                 <p>
-                                                    Based on your requirements, our experts will give you personalized solutions & quotation
+                                                    Vacuum cleaning to give you fresh, neat & vibrant vibes
                                                 </p>
                                             </div>
                                         </div>
@@ -251,9 +297,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>100% Expertise & Experience </h4>
+                                                <h4>Far-Flung Areas & Corners </h4>
                                                 <p>
-                                                    Get service from the best industry experts to fulfill your requirements
+                                                    Cleaning of tough areas like window grills, electric fittings & switchboards
                                                 </p>
                                             </div>
                                         </div>
@@ -274,7 +320,7 @@ const Electrician = () => {
                                             aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseFour"
                                         >
-                                            What are the electrician charges in Ahmedabad?
+                                            What are the home/commercial cleaning charges in Ahmedabad?
                                             <i className="fa-solid fa-chevron-down"></i>
                                         </button>
                                     </div>
@@ -377,4 +423,4 @@ const Electrician = () => {
     );
 };
 
-export default Electrician;
+export default Cleaning;

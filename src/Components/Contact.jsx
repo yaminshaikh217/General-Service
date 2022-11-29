@@ -51,7 +51,7 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <button className="contactBtn" onClick={showContact}>
-            Get in touch
+            Get in touch <i className="fa-solid fa-arrow-right-long ms-2"></i>
           </button>
         </div>
       </section>

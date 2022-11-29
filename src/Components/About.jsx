@@ -1,59 +1,112 @@
 import about from "../assets/about.png";
 import { aboutAnim } from "../utils/gsap";
 import { useEffect } from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 const About = () => {
   useEffect(() => {
-    aboutAnim();
+    // aboutAnim();
   }, []);
   return (
     <>
-      <section className="about" id="about">
+      <section className="about" id="abouts">
         <div className="container">
-          <div className="evenCols">
+          <div className="evenCols targetCounter">
             <div>
               {/* <h3>ABOUT US</h3> */}
               <h2>ABOUT US</h2>
               <h5>
-                At fair Deal, we provide quality work at affordable prices. We
-                are dedicated to excellent service and doing the job right.
+                Fair Deal is on a mission to reach all households and commercial
+                places and make them shine like a diamond while also maintaining
+                the crystal of the diamond.
               </h5>
               <p>
-                Our skilled technicians always arrive on time and ready to serve
-                you.We respond to all of your  requests promptly, with a
-                friendly and courteous attitude.We have our own vehicle fleet
-                and boast the most modern tools and equipment.You can rest easy
-                knowing that our technicians are certified by the city.
+                Think of any of your cleaning & maintenance requirements, and we
+                will be at your doorsteps within a few minutes. Get world-class
+                services from our professionally trained workers who are the
+                best at what they do and are equipped with modern tools and
+                equipment.
               </p>
               <p>
-                Our skilled technicians always arrive on time and ready to serve
-                you.We respond to all of your  requests promptly, with a
-                friendly and courteous attitude.We have our own vehicle fleet
-                and boast the most modern tools and equipment.You can rest easy
-                knowing that our technicians are certified by the city.
+                Relax and enjoy your life, by leveraging our home cleaning,
+                plumbing, AC maintenance, pest control, RO cleaning & electric
+                services.
               </p>
-              {/* <div className="evenCols mt-5">
-                <div>
-                  <p className="num">88+</p>
-                  <h4>Project Complete</h4>
-                  <h5>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Nihil possimus omnis doloribus?
-                  </h5>
-                </div>
-                <div>
-                  <p className="num">24%</p>
-                  <h4>Great Results</h4>
-                  <h5>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Nihil possimus omnis doloribus?
-                  </h5>
-                </div>
-              </div> */}
+              <p>
+                We know it can be difficult to find that perfect match for small
+                repair & maintenance work, and that’s why we have got you the
+                Fair Deal!{" "}
+              </p>
+              <p>The best part? All of these are at affordable prices. </p>
             </div>
-            <div>
-              {/* <img src={about} alt="About" /> */}
-              <div className="progresBox">
+            <div className="d-flex-jcc-alc">
+              <div className="autoNumBox">
+                <div>
+                  <CountUp end={1000} redraw={true} suffix="+">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <p>Service Provide</p>
+                </div>
+                <div>
+                  <CountUp end={175} redraw={true} suffix="+">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <p>Customer</p>
+                </div>
+                <div>
+                  <CountUp end={4} redraw={true} suffix="+">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <p>Rating</p>
+                </div>
+                <div>
+                  <CountUp end={60} redraw={true} suffix="+">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <p>Vendors</p>
+                </div>
+                <div>
+                  <CountUp end={7} redraw={true} suffix="+">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+
+                  <p>Locations</p>
+                </div>
+                <div>
+                  <CountUp end={98} redraw={true} suffix="%">
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <h2 ref={countUpRef} className="counter-numbers" />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+
+                  <p>Satisfaction Ration</p>
+                </div>
+              </div>
+
+              {/* <div className="progresBox">
                 <div className="progressCards">
                   <div className="even">
                     <p>Results</p>
@@ -81,7 +134,7 @@ const About = () => {
                     <div className="absBar"></div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

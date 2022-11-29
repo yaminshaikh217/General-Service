@@ -25,14 +25,14 @@ function Index() {
     <>
       <Navbar/>
       <Home/>
-      <About/>
       <Services/>
+      <About/>
       {/* <Expert/> */}
       <Testimonial/>
       <UpcomingServices/>
       <Contact/>
       <Footer/>
-      <ScrollTop/>
+      <ScrollTop hide={false}/>
     </>
   )
 }

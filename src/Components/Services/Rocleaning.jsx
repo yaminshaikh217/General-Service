@@ -5,16 +5,16 @@ import sink from "../../assets/sink.png";
 import { useEffect } from "react";
 import ScrollTop from "../ScrollTop.jsx";
 
-const Electrician = () => {
+const Rocleaning = () => {
     let arr = [
         {
-            title: "Electric Part Installation/Removal",
+            title: "RO Installation/Uninstallation",
         },
         {
-            title: "Electric Repair",
+            title: "RO Repair Services",
         },
         {
-            title: "Customized Requirements",
+            title: "Full-Service Package ",
         },
     ];
     useEffect(() => {
@@ -28,9 +28,9 @@ const Electrician = () => {
                 <div className="container">
                     <div className="heroElec">
                         <div>
-                            <h2>Electrician </h2>
+                            <h2>RO Cleaning</h2>
                             <p>
-                                Don’t let your electric issues give you shocks when Fair Deal is here to handle all your requirements!
+                                Your body consists of 75% water! Ensure you’re drinking healthy water with our RO services.
                             </p>
                         </div>
                         <div>
@@ -55,10 +55,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Part Installation/Removal</h2>
+                                        <h2>RO Installation/Uninstallation</h2>
                                         <ul>
-                                            <li>Professional installation of electronic devices </li>
-                                            <li>Remove machines/devices without any damage </li>
+                                            <li>Installtion/Uninstalltion of the RO Machine</li>
+                                            <li>7-days of after-service support</li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -91,9 +91,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Installation/Removal</h4>
+                                                <h4>Installtion/Uninstalltion</h4>
                                                 <p>
-                                                    Install/remove any electronic machine or device of your choice
+                                                    Professional and damage-free installation/uninstallation of RO machine
                                                 </p>
                                             </div>
                                         </div>
@@ -102,8 +102,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Wiring</h4>
-                                                <p>Wiring required to install/remove electronic appliances of your premises </p>
+                                                <h4>After-installation check-up  </h4>
+                                                <p>Ensure everything is in working condition & ready-to-use </p>
                                             </div>
                                         </div>
                                         <div className="includeContent">
@@ -111,9 +111,8 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
-                                                <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                <h4>7-days Support</h4>
+                                                <p>If there’s anything wrong with the installation, our experts are there for you!
                                                 </p>
                                             </div>
                                         </div>
@@ -123,12 +122,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Electric Repair</h2>
+                                        <h2>RO Repair Services </h2>
                                         <ul>
-                                            <li>Inspection to identify or confirm the stated problem</li>
-                                            <li>
-                                                Repairing of respective electronic device
-                                            </li>
+                                            <li>On-site visit & Inspection to identify the issue</li>
+                                            <li>An accurate solution to get things on track </li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -172,7 +169,7 @@ const Electrician = () => {
                                             <div>
                                                 <h4>Repairing </h4>
                                                 <p>
-                                                    Repairing of electronics supported by modern tools and machines
+                                                    Leakage repair of galvanized iron or PVC pipes with either joint pipe or MSeal (Charged extra)
                                                 </p>
                                             </div>
                                         </div>
@@ -181,9 +178,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Clean-up</h4>
+                                                <h4>100% Professionalism </h4>
                                                 <p>
-                                                    Cleaning of the surrounding if it has been dusted or unorganized
+                                                    We use only high-quality spare parts & procedures to serve you the best!
                                                 </p>
                                             </div>
                                         </div>
@@ -193,10 +190,10 @@ const Electrician = () => {
                             <div className="accordion-item">
                                 <div className="mainList">
                                     <div>
-                                        <h2>Customized Requirements</h2>
+                                        <h2>Full-Service Package </h2>
                                         <ul>
-                                            <li>Bespoke solutions based on your requirements </li>
-                                            <li>Services by industry experts equipped with the latest tools & technology </li>
+                                            <li>Make your RO like a recently-purchased one </li>
+                                            <li>Best for the RO that hasn’t been serviced in a year </li>
                                         </ul>
                                         <button
                                             className="viewD"
@@ -229,9 +226,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Requirement Gathering  </h4>
+                                                <h4>Inspection  </h4>
                                                 <p>
-                                                    Tell us your unique and specific electric appliance service requirements
+                                                    Our experts will identify the issues in your RO
                                                 </p>
                                             </div>
                                         </div>
@@ -240,9 +237,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>Custom Quotation </h4>
+                                                <h4>Filter Installation  </h4>
                                                 <p>
-                                                    Based on your requirements, our experts will give you personalized solutions & quotation
+                                                    Install sediment, spun, and carbon filters along with RO Membrane & Housing
                                                 </p>
                                             </div>
                                         </div>
@@ -251,9 +248,9 @@ const Electrician = () => {
                                                 <img src={sink} alt="electrician" />
                                             </div>
                                             <div>
-                                                <h4>100% Expertise & Experience </h4>
+                                                <h4>After-service check-up  </h4>
                                                 <p>
-                                                    Get service from the best industry experts to fulfill your requirements
+                                                    Ensure proper water flow, water quality & functional condition of other parts
                                                 </p>
                                             </div>
                                         </div>
@@ -274,7 +271,7 @@ const Electrician = () => {
                                             aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseFour"
                                         >
-                                            What are the electrician charges in Ahmedabad?
+                                            What are the RO  charges in Ahmedabad?
                                             <i className="fa-solid fa-chevron-down"></i>
                                         </button>
                                     </div>
@@ -377,4 +374,4 @@ const Electrician = () => {
     );
 };
 
-export default Electrician;
+export default Rocleaning;
