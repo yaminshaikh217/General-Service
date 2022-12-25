@@ -16,10 +16,10 @@ const Home = () => {
         <div className="heroBg">
           <div className="container">
             <h1 className="revealText">
-            {/* We are Your End-to-End<br /> */}
-             Cleaning & Maintenance Partner. 
+              {/* We are Your End-to-End<br /> */}
+              We are Your End-to-End
             </h1>
-            <p className="revealText">We are Your End-to-End</p>
+            <p className="revealText"> Cleaning & Maintenance Partner. </p>
             <div className="btnGroup revealText">
               <button className="primaryBtn" onClick={showContact}>
                 Get in touch <i className="fa-solid fa-arrow-right-long ms-2"></i>

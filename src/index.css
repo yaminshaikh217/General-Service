@@ -94,7 +94,7 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 2rem;
 }
 
-.logo>* {
+.logo > * {
   z-index: 10;
 }
 
@@ -235,7 +235,7 @@ input[type="number"]::-webkit-outer-spin-button {
   /* top: -10vh; */
 }
 
-.heroBg>* {
+.heroBg > * {
   z-index: 10;
   color: #fff;
 }
@@ -325,11 +325,13 @@ footer {
   min-height: 10vh;
   color: #fff;
   font-weight: 500;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
-
+.footer .logo {
+  margin-bottom: 2rem;
+}
 .icons i {
   font-size: 2.2rem;
   background: #ffffff;
@@ -339,19 +341,28 @@ footer {
   color: #0e1454;
   margin-right: 2rem;
 }
-
+.footer .icons a {
+  display: block;
+  margin-bottom: 1rem;
+}
 .footer a {
   color: #fff;
 }
 
 .icons div:has(img) {
-  width: 24%;
+  width: 50%;
   cursor: pointer;
-  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.icons a {
-  display: contents;
+.footer .icons {
+  display: flex;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -475,7 +486,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.autoNumBox>div {
+.autoNumBox > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -650,7 +661,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.clippyCard>* {
+.clippyCard > * {
   transform: skewX(-6deg) rotate(-6deg);
   text-align: center;
 }
@@ -1015,7 +1026,7 @@ footer {
   transition: all 0.2s linear;
 }
 
-.form .info:hover {
+.form .borderBottom:hover .info {
   color: var(--primary-font-color);
 }
 
@@ -1310,7 +1321,7 @@ footer {
   color: #fff;
   border-radius: 100vmax;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0.7rem 1.5rem;
 }
 
@@ -1323,7 +1334,7 @@ footer {
   align-items: center;
 }
 
-.heroElec>div {
+.heroElec > div {
   padding: 4rem;
 }
 
@@ -1366,7 +1377,7 @@ footer {
   cursor: pointer;
 }
 
-.serviceNav>div {
+.serviceNav > div {
   border-radius: 0.5rem;
   /* background: #eff2ff; */
   /* box-shadow: 0 3px 5px 0 rgba(216, 216, 216, 0.7); */
@@ -1382,7 +1393,7 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
@@ -1398,9 +1409,9 @@ footer {
   min-height: 40vh;
 }
 
-.serviceNav .img img:hover {
+/* .serviceNav .img img:hover {
   border: 2px solid var(--primary-font-color);
-}
+} */
 
 .electrician .detail .img::before {
   display: none;
@@ -1418,8 +1429,7 @@ footer {
 /* serviceListing design Start */
 
 .serviceListing {
-  display: grid;
-  grid-template-columns: 75% 25%;
+  /* display: grid; */
   gap: 2rem;
   padding: 2rem 0;
   padding-bottom: 3rem;
@@ -1480,7 +1490,7 @@ footer {
 }
 
 .detailImg {
-  width: 12%;
+  width: 10%;
   height: 12%;
   aspect-ratio: 1;
   position: relative;
@@ -1498,10 +1508,10 @@ footer {
   background: #fff;
   color: #030921;
   font-weight: 500;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   bottom: -1rem;
   left: 50%;
-  padding: .6rem;
+  padding: 0.6rem;
   width: 7rem;
   transform: translateX(-50%);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -1550,10 +1560,10 @@ footer {
 
 .serviceListing .accordion {
   position: relative;
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
-.serviceListing .accordion::before {
+/* .serviceListing .accordion::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1561,7 +1571,7 @@ footer {
   height: 100%;
   width: 1px;
   background: #545454;
-}
+} */
 
 .saveCards {
   background: rgb(237, 237, 237);
@@ -1621,8 +1631,6 @@ footer {
 
 /* TERMS CONDITION  END */
 
-
-
 /* GENERAL MOBILE RESPONSIVE STYLES  */
 @media (max-width: 991px) {
   .contact .form {
@@ -1646,7 +1654,7 @@ footer {
     flex-direction: column;
   }
 
-  .footer>div {
+  .footer > div {
     margin-bottom: 2rem;
   }
 
@@ -1658,7 +1666,7 @@ footer {
     order: 2;
   }
 
-  .heroElec>div {
+  .heroElec > div {
     padding: 2rem;
   }
 
@@ -1690,7 +1698,7 @@ footer {
     flex-direction: column;
   }
 
-  .headline .container>div {
+  .headline .container > div {
     margin-bottom: 0.5rem;
   }
 
@@ -1723,6 +1731,9 @@ footer {
     left: unset;
     right: unset;
   }
+  .grid-col-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1731,7 +1742,7 @@ footer {
     margin-inline: auto;
   }
 
-  .heroElec>div {
+  .heroElec > div {
     padding: 1rem;
   }
 
@@ -1815,7 +1826,7 @@ footer {
   }
 
   .logo img {
-    width: 27%;
+    width: 18%;
   }
 
   .logo h2 {

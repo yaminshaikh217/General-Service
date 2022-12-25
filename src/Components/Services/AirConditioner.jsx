@@ -423,7 +423,7 @@ const AirContioner = () => {
               </div>
             </div>
 
-            <div className="rightListing">
+            {/* <div className="rightListing">
               <div className="saveCards">
                 <i className="fa-solid fa-tags"></i>
                 Save 10% on every order
@@ -432,7 +432,7 @@ const AirContioner = () => {
                 <i className="fa-solid fa-tags"></i>
                 Save 10% on every order
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
