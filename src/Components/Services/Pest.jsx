@@ -68,7 +68,7 @@ const Pest = () => {
                                     <div className="detailImg">
                                         <img src={sink} alt="electrician" />
                                         <button>
-                                            Add <i className="fa-solid fa-plus ms-2"></i>
+                                            Book <i className="fa-solid fa-plus ms-2"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@ const Pest = () => {
                                     <div className="detailImg">
                                         <img src={sink} alt="electrician" />
                                         <button>
-                                            Add <i className="fa-solid fa-plus ms-2"></i>
+                                            Book <i className="fa-solid fa-plus ms-2"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -205,7 +205,7 @@ const Pest = () => {
                                     <div className="detailImg">
                                         <img src={sink} alt="electrician" />
                                         <button>
-                                            Add <i className="fa-solid fa-plus ms-2"></i>
+                                            Book <i className="fa-solid fa-plus ms-2"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -260,7 +260,7 @@ const Pest = () => {
                                 <div>
                                     <div>
                                         <button
-                                            className="viewD faqBtn"
+                                            className="viewD faqBtn collapsed"
                                             type="button"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#panelsStayOpen-collapseFour"
@@ -291,7 +291,7 @@ const Pest = () => {
                                 <div>
                                     <div>
                                         <button
-                                            className="viewD faqBtn"
+                                            className="viewD faqBtn collapsed"
                                             type="button"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#panelsStayOpen-collapseFive"
@@ -323,7 +323,7 @@ const Pest = () => {
                                 <div>
                                     <div>
                                         <button
-                                            className="viewD faqBtn"
+                                            className="viewD faqBtn collapsed"
                                             type="button"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#panelsStayOpen-collapseSix"

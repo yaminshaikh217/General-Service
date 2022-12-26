@@ -15,11 +15,12 @@ const Footer = () => {
     <>
       <footer>
         <div className="container footer">
-          <div className="logo">
-            <img src={Logo} alt="Logo" />
-            <h2>FAIR DEAL</h2>
-          </div>
+
           <div className="grid-col-3">
+            <div className="logo">
+              <img src={Logo} alt="Logo" />
+              <h2>FAIR DEAL</h2>
+            </div>
             <div>
               <NavLink to='/terms'><p>Terms Condition</p></NavLink>
               <NavLink to='/privacy'><p>Privacy Policy</p></NavLink>
@@ -48,14 +49,11 @@ const Footer = () => {
                   <img src={apple} alt="googleplaystore" />
                 </div>
               </div>
-              {/* <i
-              className="fa-brands fa-google-play"
-              onClick={handleComingSoon}></i> */}
-              {/* <i className="fa-brands fa-apple" onClick={handleComingSoon}></i> */}
             </div>
-            <div>
-              <p>Copyright 2022. All Rights Reserved</p>
-            </div>
+
+          </div>
+          <div>
+            <p className="text-center">Copyright 2022. All Rights Reserved</p>
           </div>
         </div>
       </footer>

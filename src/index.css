@@ -132,7 +132,7 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 0;
   width: 0%;
   height: 0.2rem;
-  background: #fff;
+  background: var(--primary-font-color);
   bottom: -3px;
   transition: all 0.2s ease-in;
 }
@@ -317,7 +317,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /* footer styles start */
 footer {
   background: rgba(3, 9, 33, 1);
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .footer {
@@ -358,6 +358,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  align-items: flex-start;
+  padding-top: 3rem;
 }
 
 .footer .icons {
@@ -1016,7 +1018,7 @@ footer {
 .form h3 {
   font-weight: 600;
   font-size: 1.8rem;
-  color: #0b1a39;
+  color: var(--primary-font-color);
   margin-bottom: 0.7rem;
 }
 
@@ -1045,7 +1047,8 @@ footer {
 }
 
 .contact .input input:focus,
-.contact textarea:focus {
+.contact textarea:focus,
+.contact select {
   outline: 0;
 }
 
@@ -1340,7 +1343,7 @@ footer {
 
 .heroElec h2 {
   color: var(--primary-font-color);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 3.5rem;
 }
 
@@ -1954,3 +1957,6 @@ footer {
 /* .icons .fa-google-play {
   color: #00C9FF;
 } */
+.text-center {
+  text-align: center;
+}
