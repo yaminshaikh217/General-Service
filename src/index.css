@@ -332,6 +332,15 @@ footer {
 .footer .logo {
   margin-bottom: 2rem;
 }
+.footer-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.grid-col-3 p {
+  margin-bottom: 0.7rem;
+}
+
 .icons i {
   font-size: 2.2rem;
   background: #ffffff;
@@ -350,7 +359,7 @@ footer {
 }
 
 .icons div:has(img) {
-  width: 50%;
+  width: 65%;
   cursor: pointer;
   margin-bottom: 2rem;
 }
@@ -1959,4 +1968,34 @@ footer {
 } */
 .text-center {
   text-align: center;
+}
+.footer .icons {
+  display: block;
+}
+.g-1 {
+  gap: 3rem;
+}
+.chooseusCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  /* width: 100%; */
+  /* justify-content: center; */
+}
+.chooseusCard p,
+.chooseusCard i {
+  font-size: 2rem;
+  color: var(--primary-font-color);
+}
+.choose-box {
+  width: fit-content;
+  padding: 3rem;
+  margin: auto;
+  display: grid;
+  /* place-items: center; */
+  justify-items: self-start;
+  border-radius: 1rem;
+  justify-content: center;
+  box-shadow: 0 0 2em rgba(111, 151, 158, 0.2);
 }

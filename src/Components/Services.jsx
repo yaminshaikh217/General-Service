@@ -63,7 +63,7 @@ const Services = () => {
       img: plumber,
       img1: plumber1,
       img2: plumber2,
-      link:"plumbing",
+      link: "plumbing",
       title: "Plumbing",
       description:
         "Starting from pipeline installations to leakage and custom requirements, we help you with your all plumbing requirements! ",
@@ -77,6 +77,14 @@ const Services = () => {
       link: "ro-cleaning",
       description:
         "End-to-end water purifier services, inclusive of installation/uninstallation, check-up, repair, and maintenance! ",
+    }, {
+      img: ro,
+      img1: ro1,
+      img2: ro2,
+      title: "Gas",
+      link: "ro-cleaning",
+      description:
+        "lorem ipsum dolor sit amet, consectetur adipiscing lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet  ",
     },
   ];
   return (

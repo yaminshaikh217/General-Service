@@ -55,16 +55,16 @@ const Navbar = () => {
             onClick={handleActive}
           >
             <Link to="/">
-              <li onClick={() => window.scrollTo({ top: 0 })}>HOME</li>
+              <li onClick={() => window.scrollTo({ top: 0 })}>Home</li>
             </Link>
             <a href="/#abouts">
-              <li>ABOUT</li>
+              <li>About</li>
             </a>
             <a href="/#serviceId">
-              <li>SERVICES</li>
+              <li>Services</li>
             </a>
             <a href="/#contactus">
-              <li>CONTACT</li>
+              <li>Contact</li>
             </a>
           </ul>
           <div

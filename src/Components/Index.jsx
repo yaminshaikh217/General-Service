@@ -10,7 +10,8 @@ import Services from './Services'
 import Testimonial from './Testimonial'
 import UpcomingServices from './UpcomingServices'
 import { useEffect } from 'react'
-import gsapFunc , {upcomingServices} from '../utils/gsap.js'
+import gsapFunc, { upcomingServices } from '../utils/gsap.js'
+import Chooseus from './Chooseus'
 
 
 function Index() {
@@ -19,20 +20,21 @@ function Index() {
     gsapFunc()
     upcomingServices()
   }, [])
-  
+
 
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <Services/>
-      <About/>
+      <Navbar />
+      <Home />
+      <Services />
+      <About />
+      <Chooseus />
       {/* <Expert/> */}
-      <Testimonial/>
-      <UpcomingServices/>
-      <Contact/>
-      <Footer/>
-      <ScrollTop hide={false}/>
+      <Testimonial />
+      <UpcomingServices />
+      <Contact />
+      <Footer />
+      <ScrollTop hide={false} />
     </>
   )
 }
