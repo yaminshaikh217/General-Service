@@ -328,6 +328,8 @@ footer {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin-inline: auto;
 }
 .footer .logo {
   margin-bottom: 2rem;
@@ -365,7 +367,7 @@ footer {
 }
 .grid-col-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   align-items: flex-start;
   padding-top: 3rem;

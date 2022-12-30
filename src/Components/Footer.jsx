@@ -14,12 +14,23 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="container footer">
+        <div className=" footer">
 
           <div className="grid-col-3">
-            <div className="logo">
-              <img src={Logo} alt="Logo" />
-              <h2>FAIR DEAL</h2>
+            <div>
+              <div className="logo">
+                <img src={Logo} alt="Logo" />
+                <h2>FAIR DEAL</h2>
+              </div>
+              <NavLink to='#'><p>We are Your End-to-End
+                Cleaning & Maintenance Partner.</p></NavLink>
+            </div>
+            <div>
+              <h4 className="footer-title">Services</h4>
+              <a href="/#abouts"><p>Home</p></a>
+              <a href="/#abouts"><p>About</p></a>
+              <a href="/#serviceId"><p>Service</p></a>
+              <a href="/#contactus"><p>Contact</p></a>
             </div>
             <div>
               <h4 className="footer-title">Further Links</h4>
